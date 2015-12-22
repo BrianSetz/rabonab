@@ -1,0 +1,15 @@
+﻿<Window x:Class="RaboNAB.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="RaboNAB" Height="172.387" Width="525">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <Button Margin="5" Name="btnOpenFile" Click="btnOpenFile_Click">Parse Rabobank CSV file</Button>
+        <ProgressBar Margin="5" Grid.Row="1" Minimum="0" Maximum="100" Name="pbStatus" />
+        <TextBlock Grid.Row="1" Text="{Binding ElementName=pbStatus, Path=Value, StringFormat={}{0:0}%}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+    </Grid>
+</Window>
